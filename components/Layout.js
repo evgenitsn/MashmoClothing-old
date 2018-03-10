@@ -12,7 +12,9 @@ export default ({children, title = defaultTitle}) => (
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
     </Head>
     <Header/>
-    {children}
+    <div style={{maxWidth: 1280, margin: '0 auto'}}>
+      {children}
+    </div>
     <Footer/>
   </div>
 )

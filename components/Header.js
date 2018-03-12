@@ -12,8 +12,9 @@ export default () => (
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1350px;
+        max-width: 1280px;
         padding: 1% 2%;
+        margin: 0 auto;
       }
       
     `}</style>

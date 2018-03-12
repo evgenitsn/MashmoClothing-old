@@ -3,12 +3,12 @@ import colors from '../theme/colors'
 
 export default () => (
   <header>
-    <Logo/>
+    <Logo maxWidth='70%'/>
     <Navigation/>
     <style jsx>{`
       header{
-        background: ${colors.headerBackgroundColor};
-        height: 60px;
+        background: ${colors.white};
+        height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -22,7 +22,7 @@ export default () => (
       body {
         padding: 0;
         margin: 0;
-        background: ${colors.mainBackgroundColor};
+        background: ${colors.white};
       }
     `}</style>
   </header>

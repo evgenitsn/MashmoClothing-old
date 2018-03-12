@@ -1,4 +1,4 @@
 export default {
-  mainBackgroundColor: '#F2F2F2',
-  headerBackgroundColor: '#F2F2F2'
+  white: '#F2F2F2',
+  black: '#181818'
 }

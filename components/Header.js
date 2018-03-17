@@ -19,6 +19,10 @@ export default () => (
       
     `}</style>
     <style global jsx>{`
+      @font-face {
+        font-family: 'Regensburg';
+        src: url('../static/fonts/Regensburg.ttf') format('truetype');
+      }
       body {
         padding: 0;
         margin: 0;

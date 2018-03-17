@@ -1,4 +1,4 @@
 export default {
-  white: '#F2F2F2',
+  white: '#FEFEFE',
   black: '#181818'
 }

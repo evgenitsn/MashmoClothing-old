@@ -1,0 +1,14 @@
+.ant-card-hoverable:hover {
+  -webkit-box-shadow: 0 2px 14px rgba(97, 97, 97, 0.342);
+          box-shadow: 0 2px 14px rgba(97, 97, 97, 0.342);
+  border-color: rgba(97, 97, 97, 0.342);
+}
+.ant-card-bordered {
+  border: 4px solid #e8e8e8;
+}
+
+.ant-card-body {
+  border: 1px solid #f8f8f8;
+  padding: 24px;
+  zoom: 1;
+}

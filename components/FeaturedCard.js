@@ -1,5 +1,6 @@
-import { Card } from 'antd'
 import React, { Component } from 'react'
+import Link from 'next/link'
+import { Card } from 'antd'
 
 const IMG1_URL = '../static/cap.jpg'
 const IMG2_URL = '../static/cap2.png'
@@ -23,21 +24,22 @@ export default class FeaturedCard extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
+    <Link as={`/p/${this.props.id}`} href={`/product?title=${this.props.title}`}>
       <Card
-      onMouseEnter={() => this.hoverOn()} 
-      onMouseLeave={() => this.hoverOff()}
-      style={{marginBottom: '5%'}}
-      hoverable
-      bordered={false}
-      cover={<img alt="cap" src={this.state.hover ? IMG2_URL : IMG1_URL} style={styles.image}/>}
-    >
-      <div style={styles.textContainer}>
-        <h3 style={styles.title}>Mashmo Cap</h3>
-        <h3 style={styles.price}>20lv.</h3>
-      </div>
-    </Card>
+        onMouseEnter={() => this.hoverOn()} 
+        onMouseLeave={() => this.hoverOff()}
+        style={{marginBottom: '5%'}}
+        hoverable
+        bordered={false}
+        cover={<img alt="cap" src={this.state.hover ? IMG2_URL : IMG1_URL} style={styles.image}/>}
+      >
+        <div style={styles.textContainer}>
+          <h3 style={styles.title}>{this.props.title}</h3>
+          <h3 style={styles.price}>{this.props.price + 'lv.'}</h3>
+        </div>
+      </Card>
+    </Link>
     )
   }
 }

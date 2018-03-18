@@ -4,6 +4,15 @@ import Slider from '../components/Slider'
 import FeaturedCard from '../components/FeaturedCard'
 import RegularCard from '../components/RegularCard'
 
+function getProducts () {
+  return [
+    { id: 'mashmo1', title: 'Mashmo 1234324', price: 21},
+    { id: 'mashmo2', title: 'Mashmo 223432', price: 22},
+    { id: 'mashmo3', title: 'Mashmo 3324324', price: 23},
+    { id: 'mashmo4', title: 'Mashmo 443242', price: 24},
+  ]
+}
+
 export default () => (
   <Layout>
     <div><img style={styles.headerImage} src={'../static/Hero1.jpg'}/></div>
@@ -14,18 +23,11 @@ export default () => (
         </Col>
       </Row>
       <Row gutter={32}>
-        <Col xs={24} sm={24} md={12} lg={6} xl={6}>
-          <FeaturedCard/>
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={6} xl={6}>
-          <FeaturedCard/>
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={6} xl={6}>
-          <FeaturedCard/>
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={6} xl={6}>
-          <FeaturedCard/>
-        </Col>
+        {getProducts().map(product => (
+          <Col xs={24} sm={24} md={12} lg={6} xl={6} key={product.id}>
+            <FeaturedCard id={product.id} title={product.title} price={product.price}/>
+          </Col>
+        ))}
       </Row>
     </div>
     <div style={{backgroundColor: '#dadada'}}>

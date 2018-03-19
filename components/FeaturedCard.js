@@ -25,7 +25,7 @@ export default class FeaturedCard extends Component {
 
   render() {
     return (
-    <Link as={`/p/${this.props.id}`} href={`/product?name=${this.props.name}`}>
+    <Link as={`/p/${this.props.id}`} href={`/product?id=${this.props.id}`}>
       <Card
         onMouseEnter={() => this.hoverOn()} 
         onMouseLeave={() => this.hoverOff()}

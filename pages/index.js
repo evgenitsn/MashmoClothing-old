@@ -4,16 +4,7 @@ import Slider from '../components/Slider'
 import FeaturedCard from '../components/FeaturedCard'
 import RegularCard from '../components/RegularCard'
 
-function getProducts () {
-  return [
-    { id: 'mashmo1', name: 'Mashmo 1234324', price: 21},
-    { id: 'mashmo2', name: 'Mashmo 223432', price: 22},
-    { id: 'mashmo3', name: 'Mashmo 3324324', price: 23},
-    { id: 'mashmo4', name: 'Mashmo 443242', price: 24},
-  ]
-}
-
-export default () => (
+const Index = (props) => (
   <Layout>
     <div><img style={styles.headerImage} src={'../static/Hero1.jpg'}/></div>
     <div style={styles.container}>
@@ -23,7 +14,7 @@ export default () => (
         </Col>
       </Row>
       <Row gutter={32}>
-        {getProducts().map(product => (
+        {props.products.map(product => (
           <Col xs={24} sm={24} md={12} lg={6} xl={6} key={product.id}>
             <FeaturedCard id={product.id} name={product.name} price={product.price}/>
           </Col>
@@ -69,6 +60,25 @@ export default () => (
     </div>
   </Layout>
 )
+
+Index.getInitialProps = async function() {
+  // const res = await fetch('url')
+  // const data = await res.json()
+  let data = [
+    { id: '1', name: 'Mashmo 1', price: 21},
+    { id: '2', name: 'Mashmo 2', price: 22},
+    { id: '3', name: 'Mashmo 3', price: 23},
+    { id: '4', name: 'Mashmo 4', price: 24},
+  ]
+
+  console.log(`Show data fetched. Count: ${data.length}`)
+
+  return {
+    products: data
+  }
+}
+
+export default Index
 
 const styles = {
   container: {

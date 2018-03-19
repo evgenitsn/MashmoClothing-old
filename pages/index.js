@@ -6,10 +6,10 @@ import RegularCard from '../components/RegularCard'
 
 function getProducts () {
   return [
-    { id: 'mashmo1', title: 'Mashmo 1234324', price: 21},
-    { id: 'mashmo2', title: 'Mashmo 223432', price: 22},
-    { id: 'mashmo3', title: 'Mashmo 3324324', price: 23},
-    { id: 'mashmo4', title: 'Mashmo 443242', price: 24},
+    { id: 'mashmo1', name: 'Mashmo 1234324', price: 21},
+    { id: 'mashmo2', name: 'Mashmo 223432', price: 22},
+    { id: 'mashmo3', name: 'Mashmo 3324324', price: 23},
+    { id: 'mashmo4', name: 'Mashmo 443242', price: 24},
   ]
 }
 
@@ -25,7 +25,7 @@ export default () => (
       <Row gutter={32}>
         {getProducts().map(product => (
           <Col xs={24} sm={24} md={12} lg={6} xl={6} key={product.id}>
-            <FeaturedCard id={product.id} title={product.title} price={product.price}/>
+            <FeaturedCard id={product.id} name={product.name} price={product.price}/>
           </Col>
         ))}
       </Row>

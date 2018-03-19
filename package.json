@@ -4,7 +4,7 @@
   "description": "Mashmo Clothing commerce website with Next.js.",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
     "start": "next start"
   },
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/evgeni-tsn/MashmoClothing#readme",
   "dependencies": {
     "antd": "^3.3.0",
+    "express": "^4.16.3",
     "next": "^5.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"

@@ -25,7 +25,7 @@ export default class FeaturedCard extends Component {
 
   render() {
     return (
-    <Link as={`/p/${this.props.id}`} href={`/product?title=${this.props.title}`}>
+    <Link as={`/p/${this.props.id}`} href={`/product?name=${this.props.name}`}>
       <Card
         onMouseEnter={() => this.hoverOn()} 
         onMouseLeave={() => this.hoverOff()}
@@ -35,7 +35,7 @@ export default class FeaturedCard extends Component {
         cover={<img alt="cap" src={this.state.hover ? IMG2_URL : IMG1_URL} style={styles.image}/>}
       >
         <div style={styles.textContainer}>
-          <h3 style={styles.title}>{this.props.title}</h3>
+          <h3 style={styles.title}>{this.props.name}</h3>
           <h3 style={styles.price}>{this.props.price + 'lv.'}</h3>
         </div>
       </Card>
